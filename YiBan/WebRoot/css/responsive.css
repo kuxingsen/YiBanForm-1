@@ -1,0 +1,84 @@
+/*
+
+*/
+
+html {webkit-text-size-adjust: none;}
+.video embed,.video object,.video iframe {width: 100%;height: auto;}
+img{max-width:100%;	height: auto;width: auto\9; /* ie8 */}
+
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+	.page-home article img{height: 380px;}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.page-home article img{height: 430px;}
+}
+
+@media only screen and (min-width: 360px) and (max-width: 767px) {
+	.menu {float: none;position: relative;top: 45px;}
+	.menu a {border-bottom: 1px solid #111111;}
+    .toggleMenu.active {display: block;}
+    .menu > li {float: none;}
+    .menu > li > .parent {background-position: 95% 50%;}
+    .menu li li .parent {background-image: url("../images/downArrow.png"); background-repeat: no-repeat; background-position: 95% 50%;}
+    .menu ul {display: block; width: 100%;}
+    .menu > li.hover > ul , .menu li li.hover ul {position: static;}
+   
+   
+   .top-header{padding: 0 10px;}
+	header {margin-top: 0px;height:100px;}
+	header #logo{margin-left: 10px;}
+	.container {display: inline-block;}/*Fix Menu*/
+	
+	.page-single .art-related img{max-width: 230px;}
+	
+	.page-home article img{height: auto;}
+	.collect_button{margin: 10px 2px;}
+	.collect_button>a{text-decoration: underline;font-size: 16px;}
+}
+
+@media only screen and (max-width: 359px) {
+	.menu {float: none;position: relative;top: 45px;}
+	.menu a {border-bottom: 1px solid #111111;}
+	.toggleMenu.active {display: block;}
+	.menu > li {float: none;text-align: right;}
+	.menu > li > .parent {background-position: 95% 50%;}
+	.menu li li .parent {background-image: url("../images/downArrow.png"); background-repeat: no-repeat; background-position: 95% 50%;}
+	.menu ul {display: block; width: 100%;}
+	.menu > li.hover > ul , .menu li li.hover ul {position: static;}
+
+
+	.top-header{padding: 0 10px;}
+	header {margin-top: 0px;height:100px;}
+	header #logo{margin-left: 10px;}
+	.container {display: inline-block;}/*Fix Menu*/
+
+	.page-single .art-related img{max-width: 230px;}
+
+	.page-home article img{height: auto;}
+
+	.collect_button , .back{
+		display: inline-block;
+		width: 260px;
+		height: 130px;
+		border-radius: 10px;
+		border: 1px solid darkgrey;
+		box-shadow: 10px 10px darkgrey;
+		margin: 10px 0px;
+		background-image: url("../images/word.png");
+		background-repeat: no-repeat;
+		background-size: 60px 60px;
+		background-position: 100px 15px;
+	}
+
+	.collect_button>a , .back>a{text-decoration: underline;font-size: 16px;}
+	.sendButton{
+		border-radius: 5px;
+		width: 30%;
+		height: auto;
+	}
+	select{
+		display: block;
+		width: 70%;
+	}
+}
