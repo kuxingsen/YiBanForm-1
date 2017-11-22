@@ -120,7 +120,7 @@
 					<p>国家奖学金（National Scholarship）是指为了激励普通本科高校、高等职业学校和高等专科学校学生勤奋
 						学习、努力进取，在德、智、体、美等方面全面发展，由中央政府出资设立的奖励特别优秀学生的奖学金。获奖
 						比例约占0.2%，获奖学生每人奖励8000元。作为大学生获得国家奖学金是一项莫大的荣誉</p>
-					<%--<a href="${pageContext.request.contextPath}/html/contact.jsp"--%><a href="${pageContext.request.contextPath}/html/ZXJ_collect1.html"
+					<%--<a href="${pageContext.request.contextPath}/html/contact.jsp"--%><a href="${pageContext.request.contextPath}/html/JXJ_collect1.html"
 						class="more">我要申请</a>
 				</div>
 			</div>
@@ -139,7 +139,7 @@
 					<p>国家励志奖学金的基本申请条件：1.热爱社会主义祖国，拥护中国共产党的领导；2.遵守宪法和法律，遵守
 						学校规章制度；3.诚实守信，道德品质优良；4.在校期间学习成绩优秀；5.家庭经济困难；6.社会能力，工作
 						能力较强，有一定的群众基础；7.无其他不良嗜好和不适合该荣誉称号的表现。</p>
-					<%--<a href="${pageContext.request.contextPath}/html/contact.jsp"--%><a href="${pageContext.request.contextPath}/html/ZXJ_collect2.html"
+					<%--<a href="${pageContext.request.contextPath}/html/contact.jsp"--%><a href="${pageContext.request.contextPath}/html/LZJXJ_collect2.html"
 						class="more">我要申请</a>
 				</div>
 			</div>
@@ -157,6 +157,24 @@
 					<div class="line"></div>
 					<p>申请基本条件： 1．热爱社会主义祖国，拥护中国共产党的领导和改革开放政策；2．遵守宪法、法律法规，遵守校纪校规，积极上进； 3．学习勤奋，态度端正； 
 						4．尊敬师长，团结同学，关心集体，诚实守信；5．积极参加体育锻炼，达到《大学生体质健康标准》；  6．按期缴清学杂费并注册的在册学生</p>
+					<%--<a href="${pageContext.request.contextPath}/html/contact.jsp"--%><a href="${pageContext.request.contextPath}/html/ZXJ_collect3.html"
+						class="more">我要申请</a>
+				</div>
+			</div>
+			</article>
+			
+			<article>
+			<div class="col-1-2 right">
+				<img src="${pageContext.request.contextPath}/images/img03.jpg" />
+			</div>
+			<div class="col-1-2 left">
+				<a class="art-category left" href="#">申请表</a>
+				<div class="clear"></div>
+				<div class="art-content">
+					<h2>下载其它申请表格模板</h2>
+					<div class="info">2016年9月20日</div>
+					<div class="line"></div>
+					<p>其他下载</p>
 					<%--<a href="${pageContext.request.contextPath}/html/contact.jsp"--%><a href="${pageContext.request.contextPath}/html/ZXJ_collect4.html"
 						class="more">我要申请</a>
 				</div>

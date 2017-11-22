@@ -5,8 +5,8 @@ import java.nio.charset.Charset;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import bean.StuInf;
 import net.sf.json.JSONObject;
+import src.bean.StuInf;
 
 public class JsonUtil {
 	

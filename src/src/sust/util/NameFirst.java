@@ -1,4 +1,4 @@
-package sust.util;
+package src.sust.util;
 
 import java.io.UnsupportedEncodingException;
 
@@ -10,11 +10,11 @@ public class NameFirst {
 			"o", "p", "q", "r", "s", "t", "w", "x", "y", "z" };
 
 	/**
-	 * È¡µÃ¸ø¶¨ºº×Ö´®µÄÊ××ÖÄ¸´®,¼´ÉùÄ¸´®
+	 * È¡ï¿½Ã¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½
 	 * 
 	 * @param str
-	 *            ¸ø¶¨ºº×Ö´®
-	 * @return ÉùÄ¸´®
+	 *            ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½
+	 * @return ï¿½ï¿½Ä¸ï¿½ï¿½
 	 */
 	public String getAllFirstLetter(String str) {
 		if (str == null || str.trim().length() == 0) {
@@ -30,11 +30,11 @@ public class NameFirst {
 	}
 
 	/**
-	 * È¡µÃ¸ø¶¨ºº×ÖµÄÊ××ÖÄ¸,¼´ÉùÄ¸
+	 * È¡ï¿½Ã¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½Ä¸,ï¿½ï¿½ï¿½ï¿½Ä¸
 	 * 
 	 * @param chinese
-	 *            ¸ø¶¨µÄºº×Ö
-	 * @return ¸ø¶¨ºº×ÖµÄÉùÄ¸
+	 *            ï¿½ï¿½ï¿½ï¿½ï¿½Äºï¿½ï¿½ï¿½
+	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½Ä¸
 	 */
 	public String getFirstLetter(String chinese) {
 		if (chinese == null || chinese.trim().length() == 0) {
@@ -42,13 +42,13 @@ public class NameFirst {
 		}
 		chinese = this.conversionStr(chinese, "GB2312", "ISO8859-1");
 
-		if (chinese.length() > 1) // ÅÐ¶ÏÊÇ²»ÊÇºº×Ö
+		if (chinese.length() > 1) // ï¿½Ð¶ï¿½ï¿½Ç²ï¿½ï¿½Çºï¿½ï¿½ï¿½
 		{
-			int li_SectorCode = (int) chinese.charAt(0); // ºº×ÖÇøÂë
-			int li_PositionCode = (int) chinese.charAt(1); // ºº×ÖÎ»Âë
+			int li_SectorCode = (int) chinese.charAt(0); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			int li_PositionCode = (int) chinese.charAt(1); // ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
 			li_SectorCode = li_SectorCode - 160;
 			li_PositionCode = li_PositionCode - 160;
-			int li_SecPosCode = li_SectorCode * 100 + li_PositionCode; // ºº×ÖÇøÎ»Âë
+			int li_SecPosCode = li_SectorCode * 100 + li_PositionCode; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
 			if (li_SecPosCode > 1600 && li_SecPosCode < 5590) {
 				for (int i = 0; i < 23; i++) {
 					if (li_SecPosCode >= li_SecPosValue[i] && li_SecPosCode < li_SecPosValue[i + 1]) {
@@ -56,7 +56,7 @@ public class NameFirst {
 						break;
 					}
 				}
-			} else // ·Çºº×Ö×Ö·û,ÈçÍ¼ÐÎ·ûºÅ»òASCIIÂë
+			} else // ï¿½Çºï¿½ï¿½ï¿½ï¿½Ö·ï¿½,ï¿½ï¿½Í¼ï¿½Î·ï¿½ï¿½Å»ï¿½ASCIIï¿½ï¿½
 			{
 				chinese = this.conversionStr(chinese, "ISO8859-1", "GB2312");
 				chinese = chinese.substring(0, 1);
@@ -67,21 +67,21 @@ public class NameFirst {
 	}
 
 	/**
-	 * ×Ö·û´®±àÂë×ª»»
+	 * ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½
 	 * 
 	 * @param str
-	 *            Òª×ª»»±àÂëµÄ×Ö·û´®
+	 *            Òª×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
 	 * @param charsetName
-	 *            Ô­À´µÄ±àÂë
+	 *            Ô­ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½
 	 * @param toCharsetName
-	 *            ×ª»»ºóµÄ±àÂë
-	 * @return ¾­¹ý±àÂë×ª»»ºóµÄ×Ö·û´®
+	 *            ×ªï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½
+	 * @return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
 	 */
 	private String conversionStr(String str, String charsetName, String toCharsetName) {
 		try {
 			str = new String(str.getBytes(charsetName), toCharsetName);
 		} catch (UnsupportedEncodingException ex) {
-			System.out.println("×Ö·û´®±àÂë×ª»»Òì³££º" + ex.getMessage());
+			System.out.println("ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ì³£ï¿½ï¿½" + ex.getMessage());
 		}
 		return str;
 	}
