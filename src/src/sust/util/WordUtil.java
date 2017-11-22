@@ -1,4 +1,4 @@
-package sust.util;
+package src.sust.util;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -19,10 +19,10 @@ import org.apache.poi.xwpf.usermodel.XWPFTableRow;
 public class WordUtil {
 
 	/*
-	 * ½«requestµÄ¼òÖ±¶Ô×ª»¯È¡³ö
+	 * ï¿½ï¿½requestï¿½Ä¼ï¿½Ö±ï¿½ï¿½×ªï¿½ï¿½È¡ï¿½ï¿½
 	 */
 	public Map<String, Object> transToMAP(Map<String, String[]> map) {
-		// ·µ»ØÖµMap
+		// ï¿½ï¿½ï¿½ï¿½ÖµMap
 		Map<String, Object> returnMap = new HashMap<String, Object>();
 		Iterator<Entry<String, String[]>> entries = map.entrySet().iterator();
 		Entry<String, String[]> entry;
@@ -50,10 +50,10 @@ public class WordUtil {
 	}
  
 	/*
-	 * ´òÓ¡Map
+	 * ï¿½ï¿½Ó¡Map
 	 */
 	public void printfMap(Map<String, Object> returnMap) {
-		System.out.println("Í¨¹ýMap.entrySet±éÀúkeyºÍvalue");
+		System.out.println("Í¨ï¿½ï¿½Map.entrySetï¿½ï¿½ï¿½ï¿½keyï¿½ï¿½value");
 		for (Entry<String, Object> entry : returnMap.entrySet()) {
 			System.out.println("key= " + entry.getKey() + "      value= " + entry.getValue());
 		}
@@ -62,26 +62,26 @@ public class WordUtil {
     public String getFileName(String file){
     	String filename = "";
     	if(file.equals("DSI")){
-    		filename="ÉÂÎ÷Ê¡¸ßÐ£¼ÒÍ¥¾­¼ÃÀ§ÄÑÑ§ÉúÈÏ¶¨ÉêÇë±í";
+    		filename="ï¿½ï¿½ï¿½ï¿½Ê¡ï¿½ï¿½Ð£ï¿½ï¿½Í¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
     	}
     	if(file.equals("AFSG")){
-    		filename="ÉÂÎ÷Ê¡¸ßµÈÑ§Ð£¹ú¼ÒÖúÑ§½ðÉêÇë±í";
+    		filename="ï¿½ï¿½ï¿½ï¿½Ê¡ï¿½ßµï¿½Ñ§Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
     	}
     	if(file.equals("SOSAF")){
-    		filename="¸ßµÈÑ§Ð£Ñ§Éú¼°¼ÒÍ¥Çé¿öµ÷²é±í";
+    		filename="ï¿½ßµï¿½Ñ§Ð£Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
     	}
     	if(file.equals("SOSAFI")){
-    		filename="¸ßµÈÑ§Ð£Ñ§Éú¼°¼ÒÍ¥Çé¿öµ÷²é±í(ËµÃ÷)";
+    		filename="ï¿½ßµï¿½Ñ§Ð£Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(Ëµï¿½ï¿½)";
     	}
     	if(file.equals("POPF")){
-    		filename="¸ßµÈÑ§Ð£½¨µµÁ¢¿¨Æ¶À§»§×ÓÅ®Çé¿öÖ¤Ã÷±í";
+    		filename="ï¿½ßµï¿½Ñ§Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å®ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½";
     	}
     	return filename;
     }
 	
 	
 	/**
-	 * ÓÃÒ»¸ödocxÎÄµµ×÷ÎªÄ£°å£¬È»ºóÌæ»»ÆäÖÐµÄÄÚÈÝ£¬ÔÙÐ´ÈëÄ¿±êÎÄµµÖÐ¡£
+	 * ï¿½ï¿½Ò»ï¿½ï¿½docxï¿½Äµï¿½ï¿½ï¿½ÎªÄ£ï¿½å£¬È»ï¿½ï¿½ï¿½æ»»ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½Ð´ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½Äµï¿½ï¿½Ð¡ï¿½
 	 * @param outpath 
 	 * @param path 
 	 * @throws Exception
@@ -102,26 +102,26 @@ public class WordUtil {
 			try {
 				is = new FileInputStream(inpfilePath);
 			} catch (FileNotFoundException e1) {
-				System.out.println("¶ÁÈëdocx´íÎó£¡");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½docxï¿½ï¿½ï¿½ï¿½");
 				e1.printStackTrace();
 			}
 			XWPFDocument doc = null;
 			try {
 				doc = new XWPFDocument(is);
 			} catch (IOException e1) {
-				System.out.println("½âÎö³ö´í£¡");			
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");			
 				e1.printStackTrace();
 			}
-			// Ìæ»»¶ÎÂäÀïÃæµÄ±äÁ¿
+			// ï¿½æ»»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½
 			try {
 				replaceInPara(doc, params);
-				System.out.println("¿ªÊ¼²énull");
+				System.out.println("ï¿½ï¿½Ê¼ï¿½ï¿½null");
 				replacenull(doc);
-				System.out.println("null²éÍêÁË");	
-				// Ìæ»»±í¸ñÀïÃæµÄ±äÁ¿
+				System.out.println("nullï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");	
+				// ï¿½æ»»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½
 				// replaceInTable(doc, params);
 			} catch (Exception e) {
-				System.out.println("Ìæ»»³ö´í£¡");
+				System.out.println("ï¿½æ»»ï¿½ï¿½ï¿½ï¿½");
 			}		
 		
 			OutputStream os = null;
@@ -129,23 +129,23 @@ public class WordUtil {
 				os = new FileOutputStream(outfilePath);
 				doc.write(os);
 			} catch (IOException e) {
-				System.out.println("Êä³ö³ö´í£¡");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 				e.printStackTrace();
 			}
 			this.close(os);
 			this.close(is);	
 		} catch (Exception e) {
-			System.out.println("testTemplateWrite³ö´í");
+			System.out.println("testTemplateWriteï¿½ï¿½ï¿½ï¿½");
 		}
 		String outFin[] = { outfilename, outfilePath };
 		return outFin;
 	}
 
 	/**
-	 * Ìæ»»¶ÎÂäÀïÃæµÄ±äÁ¿
+	 * ï¿½æ»»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½
 	 * 
-	 * @param doc  ÒªÌæ»»µÄÎÄµµ
-	 * @param params ²ÎÊý
+	 * @param doc  Òªï¿½æ»»ï¿½ï¿½ï¿½Äµï¿½
+	 * @param params ï¿½ï¿½ï¿½ï¿½
 	 */
 	private void replaceInPara(XWPFDocument doc, Map<String, Object> params) {
 		Iterator<XWPFParagraph> iterator = doc.getParagraphsIterator();
@@ -160,9 +160,9 @@ public class WordUtil {
 	}
 
 	/**
-	 * Ìæ»»¶ÎÂäÀïÃæµÄ±äÁ¿
-	 * @param para      ÒªÌæ»»µÄ¶ÎÂä
-	 * @param params         ²ÎÊý
+	 * ï¿½æ»»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½
+	 * @param para      Òªï¿½æ»»ï¿½Ä¶ï¿½ï¿½ï¿½
+	 * @param params         ï¿½ï¿½ï¿½ï¿½
 	 */
 	private void replaceInPara(XWPFParagraph para, Map<String, Object> params) {
 		try {
@@ -170,7 +170,7 @@ public class WordUtil {
 			Matcher matcher;
 			System.out.println(para.getParagraphText());
 //			if (this.matcher(para.getParagraphText()).find()) {
-//				System.out.println("³É¹¦Æ´Åäµ½ÁË±í´ïÊ½");
+//				System.out.println("ï¿½É¹ï¿½Æ´ï¿½äµ½ï¿½Ë±ï¿½ï¿½Ê½");
 //			}
 			if (this.matcher(para.getParagraphText()).find()) {
 				runs = para.getRuns();
@@ -178,15 +178,15 @@ public class WordUtil {
 					XWPFRun run = runs.get(i);
 					String runText = run.toString();
 					matcher = this.matcher(runText);
-					//System.out.println("ÏÖÔÚµÄrunTextÊÇ£º" + runText);
+					//System.out.println("ï¿½ï¿½ï¿½Úµï¿½runTextï¿½Ç£ï¿½" + runText);
 					if (matcher.find()) {
 
 						while ((matcher = this.matcher(runText)).find()) {
-							//System.out.println("ÕÒµ½µÄruntext----" + String.valueOf(params.get(matcher.group(1))));
+							//System.out.println("ï¿½Òµï¿½ï¿½ï¿½runtext----" + String.valueOf(params.get(matcher.group(1))));
 							runText = matcher.replaceFirst(String.valueOf(params.get(matcher.group(1))));
 						}
-						// Ö±½Óµ÷ÓÃXWPFRunµÄsetText()·½·¨ÉèÖÃÎÄ±¾Ê±£¬ÔÚµ×²ã»áÖØÐÂ´´½¨Ò»¸öXWPFRun£¬°ÑÎÄ±¾¸½¼ÓÔÚµ±Ç°ÎÄ±¾ºóÃæ£¬
-						// ËùÒÔÎÒÃÇ²»ÄÜÖ±½ÓÉèÖµ£¬ÐèÒªÏÈÉ¾³ýµ±Ç°run,È»ºóÔÙ×Ô¼ºÊÖ¶¯²åÈëÒ»¸öÐÂµÄrun¡£
+						// Ö±ï¿½Óµï¿½ï¿½ï¿½XWPFRunï¿½ï¿½setText()ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½Ê±ï¿½ï¿½ï¿½Úµ×²ï¿½ï¿½ï¿½ï¿½ï¿½Â´ï¿½ï¿½ï¿½Ò»ï¿½ï¿½XWPFRunï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½Ç°ï¿½Ä±ï¿½ï¿½ï¿½ï¿½æ£¬
+						// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç²ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½Ç°run,È»ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½Ö¶ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Âµï¿½runï¿½ï¿½
 						para.removeRun(i);
 						XWPFRun now = para.insertNewRun(i);
 
@@ -196,17 +196,17 @@ public class WordUtil {
 					}
 				}
 			}else{
-				System.out.println(para.getParagraphText()+"Ã»ÓÐÕÒµ½");
+				System.out.println(para.getParagraphText()+"Ã»ï¿½ï¿½ï¿½Òµï¿½");
 			}
 		} catch (Exception e) {
-			System.out.println("replaceInParaÆ¥Åä³ö´í");
+			System.out.println("replaceInParaÆ¥ï¿½ï¿½ï¿½ï¿½ï¿½");
 		}	
 	}
 
 	/**
-	 * Ìæ»»±í¸ñÀïÃæµÄ±äÁ¿ 
-	 * @param doc      ÒªÌæ»»µÄÎÄµµ
-	 * @param params   ²ÎÊý
+	 * ï¿½æ»»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ 
+	 * @param doc      Òªï¿½æ»»ï¿½ï¿½ï¿½Äµï¿½
+	 * @param params   ï¿½ï¿½ï¿½ï¿½
 	 */
 	private void replaceInTable(XWPFDocument doc, Map<String, Object> params) {
 		Iterator<XWPFTable> iterator = doc.getTablesIterator();
@@ -255,14 +255,14 @@ public class WordUtil {
 									XWPFRun run = runs.get(i);
 									String runText = run.toString();
 									matchers = this.matchers(runText);
-									//System.out.println("ÏÖÔÚµÄrunTextÊÇ£º" + runText);
+									//System.out.println("ï¿½ï¿½ï¿½Úµï¿½runTextï¿½Ç£ï¿½" + runText);
 									if (matchers.find()) {
 
 										while ((matchers = this.matchers(runText)).find()) {
-											//System.out.println("Ìæ»»null");
+											//System.out.println("ï¿½æ»»null");
 										}
-										// Ö±½Óµ÷ÓÃXWPFRunµÄsetText()·½·¨ÉèÖÃÎÄ±¾Ê±£¬ÔÚµ×²ã»áÖØÐÂ´´½¨Ò»¸öXWPFRun£¬°ÑÎÄ±¾¸½¼ÓÔÚµ±Ç°ÎÄ±¾ºóÃæ£¬
-										// ËùÒÔÎÒÃÇ²»ÄÜÖ±½ÓÉèÖµ£¬ÐèÒªÏÈÉ¾³ýµ±Ç°run,È»ºóÔÙ×Ô¼ºÊÖ¶¯²åÈëÒ»¸öÐÂµÄrun¡£
+										// Ö±ï¿½Óµï¿½ï¿½ï¿½XWPFRunï¿½ï¿½setText()ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½Ê±ï¿½ï¿½ï¿½Úµ×²ï¿½ï¿½ï¿½ï¿½ï¿½Â´ï¿½ï¿½ï¿½Ò»ï¿½ï¿½XWPFRunï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½Ç°ï¿½Ä±ï¿½ï¿½ï¿½ï¿½æ£¬
+										// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç²ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½Ç°run,È»ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½Ö¶ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Âµï¿½runï¿½ï¿½
 										para.removeRun(i);
 										para.insertNewRun(i).setText("");
 
@@ -274,12 +274,12 @@ public class WordUtil {
 				}			
 			}
 		} catch (Exception e) {
-			System.out.println("Ìæ»»null³ö´í");
+			System.out.println("ï¿½æ»»nullï¿½ï¿½ï¿½ï¿½");
 		}
 	}
 
 	/**
-	 * ÕýÔòÆ¥Åä×Ö·û´® 
+	 * ï¿½ï¿½ï¿½ï¿½Æ¥ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ 
 	 * @param str
 	 * @return
 	 */
@@ -296,7 +296,7 @@ public class WordUtil {
 	}
 
 	/**
-	 * ¹Ø±ÕÊäÈëÁ÷
+	 * ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @param is
 	 */
 	private void close(InputStream is) {
@@ -310,7 +310,7 @@ public class WordUtil {
 	}
 
 	/**
-	 * ¹Ø±ÕÊä³öÁ÷
+	 * ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @param os
 	 */
 	private void close(OutputStream os) {

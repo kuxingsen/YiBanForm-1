@@ -1,4 +1,4 @@
-package sust.servlet;
+package src.sust.servlet;
 
 import java.io.IOException;
 

@@ -1,20 +1,20 @@
-package bean;
+package src.bean;
 
 public class StuInf {
 	//verify_me
-	private String yb_userid="";//Ò×°àÓÃ»§id
-	private String yb_realname="";//ÕæÊµÐÕÃû
-	private String yb_schoolname="";//ËùÔÚÑ§Ð£Ãû³Æ
-	private String yb_collegename="";//ËùÔÚÑ§ÔºÃû³Æ
-	private String yb_classname="";//ËùÔÚ°à¼¶Ãû³Æ
-	private String yb_enteryear="";//ÈëÑ§Äê·Ý
-	private String yb_studentid="";//Ñ§ºÅ
-	private String yb_examid="";//×¼¿¼Ö¤ºÅ
-	private String yb_admissionid="";//Â¼È¡Í¨Öª±àºÅ
-	private String yb_employid="";//¹¤ºÅ
+	private String yb_userid="";//ï¿½×°ï¿½ï¿½Ã»ï¿½id
+	private String yb_realname="";//ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½
+	private String yb_schoolname="";//ï¿½ï¿½ï¿½ï¿½Ñ§Ð£ï¿½ï¿½ï¿½ï¿½
+	private String yb_collegename="";//ï¿½ï¿½ï¿½ï¿½Ñ§Ôºï¿½ï¿½ï¿½ï¿½
+	private String yb_classname="";//ï¿½ï¿½ï¿½Ú°à¼¶ï¿½ï¿½ï¿½ï¿½
+	private String yb_enteryear="";//ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½
+	private String yb_studentid="";//Ñ§ï¿½ï¿½
+	private String yb_examid="";//×¼ï¿½ï¿½Ö¤ï¿½ï¿½
+	private String yb_admissionid="";//Â¼È¡Í¨Öªï¿½ï¿½ï¿½
+	private String yb_employid="";//ï¿½ï¿½ï¿½ï¿½
 	//real_me
-	private String yb_sex="";//ÐÔ±ð
-	private String yb_birthday="";//ÉúÈÕ
+	private String yb_sex="";//ï¿½Ô±ï¿½
+	private String yb_birthday="";//ï¿½ï¿½ï¿½ï¿½
 	public String getYb_userid() {
 		return yb_userid;
 	}

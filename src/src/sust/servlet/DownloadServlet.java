@@ -1,4 +1,4 @@
-package sust.servlet;
+package src.sust.servlet;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -22,8 +22,8 @@ public class DownloadServlet extends HttpServlet {
 		//org.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH=true
 		String fileName = request.getParameter("filename");
 		String filePath = request.getSession().getServletContext().getRealPath("/Result/")+fileName;
-		//String downloadPath = "C:\\Users\\Zhang\\Desktop\\ÁÙÊ±\\";
-		System.out.println("1.ÎÄ¼þÃû£º" + fileName + "\n2.ÎÄ¼þÂ·¾¶£º" + filePath);
+		//String downloadPath = "C:\\Users\\Zhang\\Desktop\\ï¿½ï¿½Ê±\\";
+		System.out.println("1.ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½" + fileName + "\n2.ï¿½Ä¼ï¿½Â·ï¿½ï¿½ï¿½ï¿½" + filePath);
 		
 		response.setHeader("Content-Disposition", "attachment; filename=" + fileName);
 		try {
@@ -40,7 +40,7 @@ public class DownloadServlet extends HttpServlet {
 			fis.close();
 			    
 		} catch (Exception e) {
-			System.out.println("ÏÂÔØ³ö´í£¡");
+			System.out.println("ï¿½ï¿½ï¿½Ø³ï¿½ï¿½ï¿½");
 		}
 	}
 }

@@ -1,4 +1,4 @@
-package sust.servlet;
+package src.sust.servlet;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -15,7 +15,7 @@ public class HandServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		WordUtil util = new WordUtil();
-		//»ñÈ¡¶ÔÓ¦µÄÇëÇó²ÎÊý
+		//ï¿½ï¿½È¡ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         String method = request.getParameter("method");
         String filename = request.getParameter("filename");
         String path = request.getSession().getServletContext().getRealPath("/template");
@@ -27,11 +27,11 @@ public class HandServlet extends HttpServlet {
         	result = util.testTemplateWrite(util.transToMAP(request.getParameterMap()), filename,path,outpath);
  
 		} catch (Exception e) {
-			System.out.println("ºÏ³ÉÊ§°Ü£¡");
+			System.out.println("ï¿½Ï³ï¿½Ê§ï¿½Ü£ï¿½");
 			e.printStackTrace();
 		}
         
-        System.out.println("1.ÎÄ¼þÃû£º"+result[0]+"\n2.ÎÄ¼þÂ·¾¶£º"+result[1]);
+        System.out.println("1.ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½"+result[0]+"\n2.ï¿½Ä¼ï¿½Â·ï¿½ï¿½ï¿½ï¿½"+result[1]);
         request.getSession().setAttribute("fileName", result[0]); 
         request.getSession().setAttribute("filePath", result[1]); 
         request.getRequestDispatcher("./download.jsp").forward(request, response);
