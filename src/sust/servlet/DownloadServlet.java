@@ -1,4 +1,4 @@
-package src.sust.servlet;
+package sust.servlet;
 
 import java.io.File;
 import java.io.FileInputStream;

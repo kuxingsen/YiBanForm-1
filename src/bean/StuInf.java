@@ -1,4 +1,4 @@
-package src.bean;
+package bean;
 
 public class StuInf {
 	//verify_me
