@@ -22,12 +22,16 @@ button:hover {
 	color: #ffffff;
 	background-color: #333333;
 }
-.di{
-    margin:0 auto;width:400px;height:400px;
+
+.di {
+	margin: 0 auto;
+	width: 400px;
+	height: 400px;
 }
-p{
-    font-size: 15px;
-    text-align: center;
+
+p {
+	font-size: 15px;
+	text-align: center;
 }
 </style>
 </head>
@@ -36,16 +40,16 @@ p{
 		//out.println("1.文件名：" + session.getAttribute("fileName") + "<br>2.文件路径：" + session.getAttribute("filePath"));
 	%>
 	<div class="di">
-	<a
-		href="./DownloadServlet?filename=<%=session.getAttribute("fileName")%>">
-		<button>点击下载<p><%=session.getAttribute("fileName")%></p></button>
-	</a>
-	<br>
-	<br>
-	<a href="index.html">
-		<button>返回首页</button>
-	</a>
+		<a
+			href="./DownloadServlet?filename=<%=session.getAttribute("fileName")%>">
+			<button>
+				点击下载
+				<p><%=session.getAttribute("fileName")%></p>
+			</button>
+		</a> <br> <br> <a href="index.html">
+			<button>返回首页</button>
+		</a>
 	</div>
-	
+
 </body>
 </html>

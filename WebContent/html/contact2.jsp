@@ -1,4 +1,5 @@
-<%@ page language="java" import="java.util.*,bean.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*,bean.*"
+	pageEncoding="UTF-8"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
@@ -10,22 +11,29 @@
 <head>
 <base href="<%=basePath%>">
 
-<title>国家助学金申请</title> <meta http-equiv="pragma" content="no-cache">
-	<meta name="author" content="HeLang">
+<title>国家助学金申请</title>
+<meta http-equiv="pragma" content="no-cache">
+<meta name="author" content="HeLang">
 
-    <!-- Mobile Specific Metas
+<!-- Mobile Specific Metas
   ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <!-- CSS
+<!-- CSS
   ================================================== -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/zerogrid.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/component.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/responsive.css">
-    <link href="${pageContext.request.contextPath}/css/jquery-ui.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/zerogrid.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/style.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/component.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/responsive.css">
+<link href="${pageContext.request.contextPath}/css/jquery-ui.min.css"
+	rel="stylesheet" type="text/css">
 
-    <!--[if lt IE 8]>
+<!--[if lt IE 8]>
     <div style=' clear: both; text-align:center; position: relative;'>
         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
             <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0"
@@ -34,7 +42,7 @@
         </a>
     </div>
     <![endif]-->
-    <!--[if lt IE 9]>
+<!--[if lt IE 9]>
     <script src="js/html5.js"></script>
     <script src="js/css3-mediaqueries.js"></script>
     <![endif]-->
@@ -42,7 +50,7 @@
 
 </head>
 <body>
- <% 
+	<% 
         StuInf stf = (StuInf)session.getAttribute("userInf");
     %>
 	<div class="wrap-body">
@@ -53,15 +61,18 @@
 			<div class="row">
 				<div class="col-1-3">
 					<div id="logo">
-						<a href="#"><img src="${pageContext.request.contextPath}/images/logo.png" /></a>
+						<a href="#"><img
+							src="${pageContext.request.contextPath}/images/logo.png" /></a>
 					</div>
 				</div>
 				<div class="col-2-3">
 					<nav> <a class="toggleMenu" href="#">Menu</a>
 					<ul class="menu">
 						<li><a href="${pageContext.request.contextPath}/index.jsp">主页</a></li>
-						<li><a href="${pageContext.request.contextPath}/html/single.html">关于我们</a></li>
-						<li><a href="${pageContext.request.contextPath}/html/ZXJ_collect.html">返回上一级</a></li>
+						<li><a
+							href="${pageContext.request.contextPath}/html/single.html">关于我们</a></li>
+						<li><a
+							href="${pageContext.request.contextPath}/html/ZXJ_collect.html">返回上一级</a></li>
 					</ul>
 					</nav>
 				</div>
@@ -154,7 +165,7 @@
 										<option value="白族">白族</option>
 										<option value="阿昌族">阿昌族</option>
 								</select> <span>政治面貌:</span> <select name="identity">
-								        <option value="共青团员">共青团员</option>
+										<option value="共青团员">共青团员</option>
 										<option value="党员">党员</option>
 										<option value="群众">群众</option>
 								</select>
@@ -164,8 +175,8 @@
 									id="FIdNumber" placeholder="请输入18位身份证号码" name="FIdNumber"
 									value="" required />
 								</label> <label> <span>联系电话：</span> <input type="number"
-									placeholder="家庭联系电话（座机请加区号）" id="PhoneNum" name="Fpho"
-									value="" required>
+									placeholder="家庭联系电话（座机请加区号）" id="PhoneNum" name="Fpho" value=""
+									required>
 								</label> <label> <span>学校:</span> <input type="text"
 									placeholder="请选择所在学校" name="school" id="school" value="陕西科技大学"
 									required>
@@ -183,8 +194,8 @@
 										<option value="职业技术学院">职业技术学院</option>
 								</select>
 								</label> <label> <span>系:</span> <input type="text"
-									placeholder="请输入所在系 如：计算机系" name="Sdptmt" id="Sdptmt"
-									value="" required>
+									placeholder="请输入所在系 如：计算机系" name="Sdptmt" id="Sdptmt" value=""
+									required>
 								</label> <label> <span>班级:</span> <input type="text"
 									placeholder="请输入所在班级" name="SCless" id="SCless" value=""
 									required>
@@ -216,8 +227,8 @@
 									<label> <span>姓名：</span> <input type="text"
 										placeholder="请输入该家庭成员姓名" name="FMName1" value="" required>
 									</label> <label> <span>年龄：</span> <input type="number"
-										placeholder="请输入该家庭成员年龄" maxlength="3" minlength="1"
-										value="" name="FMAge1" required>
+										placeholder="请输入该家庭成员年龄" maxlength="3" minlength="1" value=""
+										name="FMAge1" required>
 									</label> <label> <span>与本人关系:</span> <select name="relative1">
 											<option value="父">父</option>
 											<option value="母">母</option>
@@ -267,21 +278,24 @@
 						</div>
 						<div class="wid-content">
 							<div class="post">
-								<a href="#"><img src="${pageContext.request.contextPath}/images/img02.jpg" /></a>
+								<a href="#"><img
+									src="${pageContext.request.contextPath}/images/img02.jpg" /></a>
 								<h6>
 									<a href="#">国家奖学金申请</a>
 								</h6>
 								<p>2016年09月21日</p>
 							</div>
 							<div class="post">
-								<a href="#"><img src="${pageContext.request.contextPath}/images/img03.jpg" /></a>
+								<a href="#"><img
+									src="${pageContext.request.contextPath}/images/img03.jpg" /></a>
 								<h6>
 									<a href="#">励志奖学金申请</a>
 								</h6>
 								<p>2016年09月21日</p>
 							</div>
 							<div class="post">
-								<a href="#"><img src="${pageContext.request.contextPath}/images/img04.jpg" /></a>
+								<a href="#"><img
+									src="${pageContext.request.contextPath}/images/img04.jpg" /></a>
 								<h6>
 									<a href="#">校园奖学金申请</a>
 								</h6>
@@ -312,7 +326,8 @@
 						<div class="menu-bottom">
 							<ul>
 								<li><a href="#">主页</a></li>
-								<li><a href="${pageContext.request.contextPath}/html/single.html">关于我们</a></li>
+								<li><a
+									href="${pageContext.request.contextPath}/html/single.html">关于我们</a></li>
 							</ul>
 							<div class="clear"></div>
 						</div>
@@ -325,10 +340,15 @@
 		</div>
 		</footer>
 	</div>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/navigation.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/art-content.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/test.js"></script>
+	<script type="text/javascript"
+		src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
+	<script type="text/javascript"
+		src="${pageContext.request.contextPath}/js/navigation.js"></script>
+	<script type="text/javascript"
+		src="${pageContext.request.contextPath}/js/jquery-ui.min.js"></script>
+	<script type="text/javascript"
+		src="${pageContext.request.contextPath}/js/art-content.js"></script>
+	<script type="text/javascript"
+		src="${pageContext.request.contextPath}/js/test.js"></script>
 </body>
 </html>
