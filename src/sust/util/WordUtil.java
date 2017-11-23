@@ -1,4 +1,4 @@
-package src.sust.util;
+package sust.util;
 
 import java.util.HashMap;
 import java.util.Iterator;

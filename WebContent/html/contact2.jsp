@@ -226,16 +226,19 @@
 								<div id="part3">
 									<label> <span>姓名：</span> <input type="text"
 										placeholder="请输入该家庭成员姓名" name="FMName1" value="" required>
-									</label> <label> <span>年龄：</span> <input type="number"
+									</label> 
+									<label> <span>年龄：</span> <input type="number"
 										placeholder="请输入该家庭成员年龄" maxlength="3" minlength="1" value=""
 										name="FMAge1" required>
-									</label> <label> <span>与本人关系:</span> <select name="relative1">
+									</label> 
+									<label> <span>与本人关系:</span> <select name="relative1">
 											<option value="父">父</option>
 											<option value="母">母</option>
 											<option value="亲属">亲属</option>
 											<option value="其他">其他</option>
 									</select>
-									</label> <label> <span>工作或学习单位：</span> <input type="text"
+									</label> 
+									<label> <span>工作或学习单位：</span> <input type="text"
 										placeholder="请如实填写，务农和无业请填写本人家庭地址" name="FMWork1" value=""
 										required>
 									</label>

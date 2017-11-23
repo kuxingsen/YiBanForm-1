@@ -1,4 +1,4 @@
-package src.sust.util;
+package sust.util;
 
 import java.nio.ByteBuffer;
 import java.nio.charset.Charset;

@@ -253,6 +253,62 @@ function CreateMumber2() {
         alert("已达人数上限，不可新添家庭成员！")
     }
 }
+//cantact6
+function CreateMumber3() {
+	if (i < 4) {
+        //添加获奖需要的label节点标签
+        var Dlabel = document.createElement("label");
+        var Plabel = document.createElement("label");
+        var Alabel = document.createElement("label");
+        //添加获奖情况需要的form节点标签
+        var Dinput = document.createElement("input");
+        var Pinput = document.createElement("input");
+        var Ainput = document.createElement("input");
+        //添加家庭成员需要的文本节点标签
+        var Dspan = document.createElement("span");
+        var Pspan = document.createElement("span");
+        var Aspan = document.createElement("span");
+        //需要添加的文本节点内容
+        var date = document.createTextNode("获奖日期:");
+        var pname = document.createTextNode("奖项名称:");
+        var addr = document.createTextNode("颁奖单位:");
+        //将要插入的父级块找到
+        //给姓名节点添加文本
+        Nspan.appendChild(date);
+        Pspan.appendChild(pname);
+        Aspan.appendChild(addr);
+        //获奖日期节点添加属性
+        Dinput.setAttribute("type", "text");
+        Dinput.setAttribute("placeholder", "2017-01-01");
+        Dinput.setAttribute("name", "Pdate" + i);
+        Dinput.setAttribute("required", true);
+        Dlabel.appendChild(Dspan);
+        Dlabel.appendChild(Dinput);
+        Part3.appendChild(Dlabel);
+
+        //给奖项名称节点添加属性
+        Pinput.setAttribute("type", "number");
+        Pinput.setAttribute("placeholder", "奖项名称");
+        Pinput.setAttribute("name", "Prize" + i);
+        Pinput.setAttribute("required", true);
+        Plabel.appendChild(Pspan);
+        Plabel.appendChild(Pinput);
+        Part3.appendChild(Plabel);
+
+        //给颁奖单位节点添加属性
+        Ainput.setAttribute("type", "text");
+        Ainput.setAttribute("placeholder", "地址");
+        Ainput.setAttribute("name", "Addr" + i);
+        Ainput.setAttribute("required", true);
+        Alabel.appendChild(Aspan);
+        Alabel.appendChild(Ainput);
+        Part3.appendChild(Alabel);
+        i++;
+    }
+    else {
+        alert("数量已达上限，不可添加！")
+    }
+}
 
 function isIdCardNo() {
     var IDCard = document.getElementById("FIdNumber");

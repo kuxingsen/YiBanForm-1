@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import src.sust.util.WordUtil;
+import sust.util.WordUtil;
 
 public class HandServlet extends HttpServlet {
 
